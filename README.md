@@ -1,3 +1,11 @@
-# FreshMarket API
+To install dependencies:
+```sh
+bun install
+```
 
-REST API for FreshMarket.
+To run:
+```sh
+bun run dev
+```
+
+open http://localhost:3000
