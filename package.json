@@ -1,7 +1,13 @@
 {
   "name": "freshmarket-api",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "dev": "bun run --hot src/index.ts",
+    "start": "bun run src/index.ts",
+    "migrate": "prisma migrate dev",
+    "migrate:deploy": "prisma migrate deploy",
+    "generate": "prisma generate",
+    "studio": "prisma studio",
+    "docker:up": "docker compose up -d"
   },
   "dependencies": {
     "@hono/swagger-ui": "^0.5.0",
