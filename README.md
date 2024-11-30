@@ -36,9 +36,10 @@ Setup database:
 
 ```sh
 # Run database only
-docker compose -f docker-compose.dev.yaml up -d
+docker compose -f docker-compose.yaml up -d
 
-docker compose up -d
+# Run all services
+docker compose up
 ```
 
 To install dependencies:
