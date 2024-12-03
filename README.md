@@ -1,10 +1,33 @@
-# FreshMarket API
+# FreshMarket API 🛒
 
-## REST API Specification
+[![Bun](https://img.shields.io/badge/Bun-%23000000.svg?style=for-the-badge&logo=bun&logoColor=white)](https://bun.sh)
+[![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)](https://prisma.io)
+[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://docker.com)
 
-- Local: `http://localhost:3000`
+A modern REST API for an e-commerce fresh market application, built with Bun and Prisma.
 
-Products:
+## 📑 Table of Contents
+
+- [Features](#features)
+- [API Specification](#api-specification)
+- [Getting Started](#getting-started)
+- [Development](#development)
+- [Database Setup](#database-setup)
+
+## ✨ Features
+
+- REST API with Express
+- PostgreSQL database with Prisma ORM
+- Authentication with JWT
+- Docker support
+- Shopping cart functionality
+- Product management
+
+## 🔌 API Specification
+
+Base URL: `http://localhost:3000`
+
+### Products API
 
 | Endpoint        | HTTP     | Description          |
 | --------------- | -------- | -------------------- |
@@ -15,7 +38,7 @@ Products:
 | `/products/:id` | `DELETE` | Delete product by id |
 | `/products/:id` | `PUT`    | Update product by id |
 
-Auth:
+### Authentication & User API
 
 | Endpoint           | HTTP     | Permission    | Description           |
 | ------------------ | -------- | ------------- | --------------------- |
@@ -30,7 +53,24 @@ Auth:
 | `/cart/items/:id`  | `DELETE` | Authenticated | Remove item from cart |
 | `/cart/items/:id`  | `PUT`    | Authenticated | Update item in cart   |
 
-## Getting Started
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Bun](https://bun.sh) installed
+- [Docker](https://docker.com) installed
+- [Docker Compose](https://docs.docker.com/compose/) installed
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+
+```sh
+bun install
+```
+
+### Database Setup
 
 Setup database:
 
@@ -40,12 +80,6 @@ docker compose -f docker-compose.yaml up -d
 
 # Run all services
 docker compose up
-```
-
-To install dependencies:
-
-```sh
-bun install
 ```
 
 Migrate database:
@@ -70,7 +104,7 @@ Open <http://localhost:3000>
 
 ## Prisma Setup
 
-Warn: You already have a .gitignore file. Don't forget to add `.env` in it to not commit any private information.
+You already have a .gitignore file. Don't forget to add `.env` in it to not commit any private information.
 
 Next steps:
 
